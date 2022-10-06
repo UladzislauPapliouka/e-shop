@@ -18,12 +18,16 @@ export const CartIcon: FC<CartIconProps> = ({
         height: `${size}px`,
         width: `${size}px`,
         fontSize: `${size/2}px`,
-        backgroundColor: bgColor
+        backgroundColor: bgColor,
+        "&:hover" : { 
+            cursor: "pointer",
+            filter: "grayscale(60%)"
+        }
     }
     const IconStyles = {
         fontSize: `${size/2}px`,
         color: color
     }
 
-    return <Avatar sx={avatarStyles}><ShoppingBagOutlinedIcon sx={IconStyles}/></Avatar>
+    return <Avatar classes={style.root} sx={avatarStyles}><ShoppingBagOutlinedIcon sx={IconStyles}/></Avatar>
 }

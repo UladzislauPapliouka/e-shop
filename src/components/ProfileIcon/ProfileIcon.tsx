@@ -19,7 +19,11 @@ export const ProfileIcon: FC<ProfileIconProps> = ({
     const avatarStyles = {
         height: `${size}px`,
         width: `${size}px`,
-        fontSize: `${size/2}px`
+        fontSize: `${size/2}px`,
+        "&:hover" : { 
+            cursor: "pointer",
+            filter: "grayscale(60%)"
+        }
     }
     if(isAuthorized){
         return <Avatar src={avatarSRC} alt={username} sx={avatarStyles} >{getAvatarShortName(username)}</Avatar>
