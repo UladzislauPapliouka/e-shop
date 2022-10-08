@@ -1,6 +1,5 @@
 import { Badge } from "@mui/material";
 import React, { FC, ReactNode } from "react";
-import styles from "./CounterLabel.module.scss";
 
 interface CounterLabelProps {
     children: ReactNode,

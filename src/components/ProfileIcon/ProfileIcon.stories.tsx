@@ -7,12 +7,12 @@ export default {
   title: "Header/ProfileIcon",
   component: ProfileIcon,
   argTypes: {
-    isAuthorized: {control: "boolean", required: true},
-    username: {control: "text", required: false},
-    size: {control: "select",options: [50,150,250],required: true},
-    avatarSRC: {control: "text", required: false},
+    isAuthorized: { control: "boolean", required: true },
+    username: { control: "text", required: false },
+    size: { control: "select",options: [ 50,150,250 ],required: true },
+    avatarSRC: { control: "text", required: false },
   },
-  parameters:{ controls: {sort: "alpha"}}
+  parameters:{ controls: { sort: "alpha" } }
 } as ComponentMeta<typeof ProfileIcon>;
 
 const Template: ComponentStory<typeof ProfileIcon> = (args) => <ProfileIcon {...args} />;

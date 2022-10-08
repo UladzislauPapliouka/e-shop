@@ -26,6 +26,64 @@
         "quotes": [
             "error",
             "double"
+        ],
+        "no-debugger": "warn",
+        "no-unused-vars": "error",
+        "eqeqeq": "error",
+        "spaced-comment": [
+            "error",
+            "always",
+            {
+                "line": {
+                    "markers": [
+                        "/"
+                    ],
+                    "exceptions": [
+                        "-",
+                        "+"
+                    ]
+                },
+                "block": {
+                    "markers": [
+                        "!"
+                    ],
+                    "exceptions": [
+                        "*"
+                    ],
+                    "balanced": true
+                }
+            }
+        ],
+        "vars-on-top": "error",
+        "array-bracket-spacing": [
+            "error",
+            "always"
+        ],
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "arrow-spacing": "error",
+        "block-spacing": "error",
+        "jsx-quotes": [
+            "error",
+            "prefer-double"
+        ],
+        "max-len": [
+            "error",
+            {
+                "code": 120,
+                "tabWidth": 2,
+                "ignoreUrls": true,
+                "ignoreStrings": false
+            }
+        ],
+        "no-multi-spaces": "error",
+        "no-multiple-empty-lines": [
+            "error",
+            {
+                "max": 1
+            }
         ]
     }
 }

@@ -1,4 +1,4 @@
-const getAvatarShortName = (username?:string)=>{
+const getAvatarShortName = (username?:string) => {
     if(username){
         const wordsArray = username.split(" ");
         const result = wordsArray.map(word => word.slice(0,1));
@@ -7,4 +7,4 @@ const getAvatarShortName = (username?:string)=>{
     return null;
 };
 
-export {getAvatarShortName};
+export { getAvatarShortName };

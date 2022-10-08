@@ -1,5 +1,4 @@
-import React, { FC, useRef } from "react";
-import style from "./SearchBar.module.scss";
+import React, { FC } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import Input from "@mui/material/Input";
 import FormControl from "@mui/material/FormControl";
@@ -9,18 +8,18 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-interface SearchBarProps {
-  categoriesOptions?: Array<string>;
+interface SearchBarProps {  
+  categoriesOptions?: Array<string>;        
   choosenCategories?: string;
   writtenString?: string;
 }
-
+                 
 export const SearchBar: FC<SearchBarProps> = ({
   categoriesOptions = [],
   choosenCategories = "All Categories",
   writtenString = "sdad",
 }) => {
-  const [archon, setArchon] = React.useState<null | HTMLElement>(null);
+  const [ archon, setArchon ] = React.useState<null | HTMLElement>(null);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setArchon(event.currentTarget);
   };
@@ -66,8 +65,8 @@ export const SearchBar: FC<SearchBarProps> = ({
               <KeyboardArrowDownIcon />
             </Button>
             <Menu open={!!archon} onClose={handleClose} anchorEl={archon}>
-              {categoriesOptions.map((ctg) => (
-                <MenuItem onClick={handleClose}>ctg</MenuItem>
+              {categoriesOptions.map((ctg, i) => (
+                <MenuItem key={i} onClick={handleClose}>ctg</MenuItem>
               ))}
             </Menu>
           </InputAdornment>
