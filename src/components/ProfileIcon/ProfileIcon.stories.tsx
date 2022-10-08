@@ -1,10 +1,10 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { ProfileIcon } from './ProfileIcon';
+import { ProfileIcon } from "./ProfileIcon";
 
 export default {
-  title: 'Header/ProfileIcon',
+  title: "Header/ProfileIcon",
   component: ProfileIcon,
   argTypes: {
     isAuthorized: {control: "boolean", required: true},
@@ -12,7 +12,7 @@ export default {
     size: {control: "select",options: [50,150,250],required: true},
     avatarSRC: {control: "text", required: false},
   },
-  parameters:{ controls: {sort: 'alpha'}}
+  parameters:{ controls: {sort: "alpha"}}
 } as ComponentMeta<typeof ProfileIcon>;
 
 const Template: ComponentStory<typeof ProfileIcon> = (args) => <ProfileIcon {...args} />;

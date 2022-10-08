@@ -5,6 +5,6 @@ const getAvatarShortName = (username?:string)=>{
         return result.join("").slice(0,2).toUpperCase();
     }
     return null;
-}
+};
 
-export {getAvatarShortName}
+export {getAvatarShortName};

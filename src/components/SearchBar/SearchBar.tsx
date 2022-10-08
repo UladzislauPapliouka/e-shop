@@ -10,15 +10,15 @@ import MenuItem from "@mui/material/MenuItem";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 interface SearchBarProps {
-  categoriesOptions?: Array<String>;
-  choosenCategories?: String;
-  writtenString?: String;
+  categoriesOptions?: Array<string>;
+  choosenCategories?: string;
+  writtenString?: string;
 }
 
 export const SearchBar: FC<SearchBarProps> = ({
   categoriesOptions = [],
   choosenCategories = "All Categories",
-  writtenString = "",
+  writtenString = "sdad",
 }) => {
   const [archon, setArchon] = React.useState<null | HTMLElement>(null);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {

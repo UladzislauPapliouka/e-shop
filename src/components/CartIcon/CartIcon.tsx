@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import style from "./CartIcon.module.scss"
-import { Avatar } from "@mui/material"
-import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import style from "./CartIcon.module.scss";
+import { Avatar } from "@mui/material";
+import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 
 interface CartIconProps {
     size:number,
@@ -23,11 +23,11 @@ export const CartIcon: FC<CartIconProps> = ({
             cursor: "pointer",
             filter: "grayscale(60%)"
         }
-    }
+    };
     const IconStyles = {
         fontSize: `${size/2}px`,
         color: color
-    }
+    };
 
-    return <Avatar classes={style.root} sx={avatarStyles}><ShoppingBagOutlinedIcon sx={IconStyles}/></Avatar>
-}
+    return <Avatar classes={style.root} sx={avatarStyles}><ShoppingBagOutlinedIcon sx={IconStyles}/></Avatar>;
+};
