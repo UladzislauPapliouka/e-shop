@@ -7,3 +7,4 @@ This project inspired on [Bazaar](<https://bazar-react.vercel.app/>)
 - `MaterialUI`
 - `Storybook`
 - `Axios`
+- `React-router-dom@6`
