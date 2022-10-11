@@ -12,12 +12,14 @@ interface SearchBarProps {
   categoriesOptions?: Array<string>;        
   choosenCategories?: string;
   writtenString?: string;
+  setChoosenCategor: (ctg?:string) => void
 }
                  
 export const SearchBar: FC<SearchBarProps> = ({
   categoriesOptions = [],
   choosenCategories = "All Categories",
-  writtenString = "sdad",
+  writtenString = "",
+  setChoosenCategor
 }) => {
   const [ archon, setArchon ] = React.useState<null | HTMLElement>(null);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -64,9 +66,9 @@ export const SearchBar: FC<SearchBarProps> = ({
               <span>{choosenCategories}</span>
               <KeyboardArrowDownIcon />
             </Button>
-            <Menu open={!!archon} onClose={handleClose} anchorEl={archon}>
+            <Menu open={!!archon} onClose={ () => { handleClose(); setChoosenCategor(); } } anchorEl={archon}>
               {categoriesOptions.map((ctg, i) => (
-                <MenuItem key={i} onClick={handleClose}>ctg</MenuItem>
+                <MenuItem key={i} onClick={() => { handleClose(); setChoosenCategor(ctg); }}>{ctg}</MenuItem>
               ))}
             </Menu>
           </InputAdornment>
