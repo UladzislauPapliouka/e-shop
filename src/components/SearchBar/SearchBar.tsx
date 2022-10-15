@@ -34,7 +34,6 @@ export const SearchBar: FC<SearchBarProps> = ({
       sx={{
         border: "1px #9d9d9d solid",
         borderRadius: "100px",
-        padding: " 2px  0 2px 8px",
         width: "100%",
         boxSizing: "border-box",
       }}
@@ -44,13 +43,14 @@ export const SearchBar: FC<SearchBarProps> = ({
         id="input-with-icon-adornment"
         placeholder="Searching for..."
         value={writtenString}
+        sx={{ height: "100%" }}
         startAdornment={
           <InputAdornment position="start">
             <SearchIcon />
           </InputAdornment>
         }
         endAdornment={
-          <InputAdornment sx={{ height: "100%" }} position="end">
+          <InputAdornment sx={{ height: "100%", maxHeight: "100%" }} position="end">
             <Button
               onClick={handleClick}
               sx={{
@@ -58,7 +58,7 @@ export const SearchBar: FC<SearchBarProps> = ({
                 borderRadius: "0 100px 100px 0",
                 width: "100%",
                 padding: "auto",
-                background: "#F6F9FC",
+                background: "black",
                 color: "#4B566B",
                 textTransform: "capitalize",
               }}
