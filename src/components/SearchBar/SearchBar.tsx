@@ -13,13 +13,15 @@ interface SearchBarProps {
   choosenCategories?: string;
   writtenString?: string;
   setChoosenCategor: (ctg?:string) => void
+  setWrittenString: (string:string) => void
 }
                  
 export const SearchBar: FC<SearchBarProps> = ({
   categoriesOptions = [],
   choosenCategories = "All Categories",
   writtenString = "",
-  setChoosenCategor
+  setChoosenCategor,
+  setWrittenString
 }) => {
   const [ archon, setArchon ] = React.useState<null | HTMLElement>(null);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -43,6 +45,7 @@ export const SearchBar: FC<SearchBarProps> = ({
         id="input-with-icon-adornment"
         placeholder="Searching for..."
         value={writtenString}
+        onChange={(e) => setWrittenString(e.currentTarget.value)}
         sx={{ height: "100%" }}
         startAdornment={
           <InputAdornment position="start">
